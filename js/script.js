@@ -1,14 +1,15 @@
 'use strict'
 console.log("hello");
 
+let a;
 let b = 2;
-let a = b * 2;
+a = b * 2;
 
 console.log(b);
 console.log(a);
 
-let someString = "sklfdmnvkm15ddq";
-console.log(someString);
-console.log(someString.length)
+let someTestString = "sklfdmnvkm15ddq";
+console.log(someTestString);
+console.log(someTestString.length)
 
-console.log(someString.toUpperCase())
+console.log(someTestString.toUpperCase())
