@@ -10,4 +10,4 @@ let someString = "sklfdmnvkm15ddq";
 console.log(someString);
 console.log(someString.length)
 
-someString.length
+console.log(someString.toUpperCase())
