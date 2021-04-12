@@ -64,3 +64,31 @@
 // |
 // Политика конфиденциальности
 
+const a = 2;
+const b = 5;
+
+console.log("a = ", a); // a
+console.log("b = ", b); // b
+console.log("a > b, ", `${a} > ${b}, `, a > b); // false
+console.log("b > a, ", `${b} > ${a}, `, b > a); // true
+console.log("a >= b, ", `${a} >= ${b}, `, a >= b); // false
+console.log("b >= a, ", `${b} >= ${a}, `, b >= a); // true
+
+console.log("a < b, ", `${a} < ${b}, `, a < b); // true
+console.log("b < a, ", `${b} < ${a}, `, b < a); // false
+console.log("a <= b, ", `${a} <= ${b}, `, a <= b); // true
+console.log("b <= a, ", `${b} <= ${a}, `, b <= a); // false
+
+function isAdult(age) {
+  // Пиши код ниже этой строки
+  const passed = age >= 18;
+
+  // Пиши код выше этой строки
+  return passed;
+}
+
+console.log(-3,isAdult(-3))
+console.log(0,isAdult(0))
+console.log(4,isAdult(4))
+console.log(18,isAdult(18))
+console.log(22,isAdult(22))
