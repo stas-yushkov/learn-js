@@ -93,14 +93,21 @@
 // Политика конфиденциальности
 
 
-let cost;
-const subscription = 'pro';
+function checkPassword(password) {
+  const ADMIN_PASSWORD = 'jqueryismyjam';
+  let message;
 
-if (subscription === 'pro') {
-  cost = 100;
-} else {
-  cost = 0;
+  if (password === null) { // Дополни эту строку
+    message =  'Отменено пользователем!';
+  } else if (password === ADMIN_PASSWORD) { // Дополни эту строку
+    message = 'Добро пожаловать!';
+  } else {
+    message = 'Доступ запрещен, неверный пароль!';
+  }
+
+  return message;
 }
 
-
-console.log(cost); // 100
+console.log(null, checkPassword(null));
+console.log('polyhax', checkPassword('polyhax'));
+console.log('jqueryismyjam', checkPassword('jqueryismyjam'));
