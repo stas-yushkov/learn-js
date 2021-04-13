@@ -67,12 +67,3 @@ console.log(`Вызов функции getSubstring('Привет мир', 8) в
 console.log(`Вызов функции getSubstring('Привет мир', 10) возвращает 'Привет мир'.`, getSubstring('Привет мир', 10));
 console.log(`Вызов функции getSubstring('Привет мир', 0) возвращает ''.`, getSubstring('Привет мир', 0));
 
-function getCharactersInColumn(string, length) {
-  let substring = string.slice(0,length); // Дополни эту строку
-  // while (0) {
-  //   console.log(1);
-  // }
-  return substring;
-}
-
-console.log(getCharactersInColumn('Привет мир', 10))
