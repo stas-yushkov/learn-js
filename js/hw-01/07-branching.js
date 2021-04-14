@@ -46,7 +46,7 @@
 /*
  * Тернарный оператор
  */
-const balance = -1000;
+const balance = 90000;
 // let message;
 
 // if (balance >= 0) {
@@ -62,14 +62,17 @@ console.log(message);
 /*
  * Блочная область видимости переменных
  */
+let a;
+if (true) {
+   a = 5;
+  // console.log(b);
+}
 
-// if (true) {
-//   const a = 5;
-//   console.log(b);
-// }
+if (true) {
+  const b = 10;
 
-// if (true) {
-//   const b = 10;
+  console.log("b",b);
+}
 
-//   console.log(a);
-// }
+console.log("a",a);
+console.log("b not defined in global",b);
