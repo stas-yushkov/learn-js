@@ -1,7 +1,7 @@
 /*
  * Длина строки, свойство length
  */
-const message = 'В этой строке 26 символов.';
+// const message = 'В этой строке 26 символов.';
 // console.log(message.length);
 
 /*
@@ -19,8 +19,8 @@ const fullName = firstName + ' ' + lastName;
  * подставив вместо x y z q значения переменных
  */
 
-const room = 716;
-const type = 'VIP';
+// const room = 716;
+// const type = 'VIP';
 
 // const welcomeMsg =
 //   'Гость ' +
@@ -32,7 +32,7 @@ const type = 'VIP';
 //   ' номер ' +
 //   room;
 
-const welcomeMsg = `Гость ${firstName} ${lastName} поселяется в ${type} номер ${room}`;
+// const welcomeMsg = `Гость ${firstName} ${lastName} поселяется в ${type} номер ${room}`;
 // console.log(welcomeMsg);
 
 /*
@@ -54,11 +54,11 @@ const orderMsg = `Вы заказываете ${quantity} холодильник
 
 // console.log(brand);
 
-let brand = 'SamSUnG';
-// console.log(brand[4]);
+// let brand = 'SamSUnG';
+// console.log(brand[brand.length - 1]);
 // console.log(brand.slice(1).toLowerCase());
 
-brand = brand[0] + brand.slice(1).toLowerCase();
+// brand = brand[0] + brand.slice(1).toLowerCase();
 
 // console.log(brand);
 
@@ -79,6 +79,7 @@ console.log(string2.includes(blacklistedWord1));
 
 const normalizedString2 = string2.toLowerCase();
 console.log(normalizedString2.includes(blacklistedWord2));
+console.log((string2.toLowerCase()).includes(blacklistedWord2));
 
 console.log(string3.includes(blacklistedWord1));
 console.log(string3.includes(blacklistedWord2));

@@ -59,8 +59,16 @@
 // Политика конфиденциальности
 
 function checkForName(fullName, name) {
- const result = fullName + name; // Дополни эту строку
+ const result = fullName.includes(name); // Дополни эту строку
   return result;
 }
 
-console.log(checkForName('dddd','d'))
+console.log(checkForName('dddd', 'd'));
+
+console.log(`Вызов функции checkForName('Егор Колбасов', 'Егор') возвращает true.`, checkForName('Егор Колбасов', 'Егор'));
+console.log(`Вызов функции checkForName('Егор Колбасов', 'егор') возвращает false.`, checkForName('Егор Колбасов', 'егор'));
+console.log(`Вызов функции checkForName('Егор Колбасов', 'егОр') возвращает false.`, checkForName('Егор Колбасов', 'егОр'));
+console.log(`Вызов функции checkForName('Егор Колбасов', 'Женя') возвращает false.`, checkForName('Егор Колбасов', 'Женя'));
+console.log(`Вызов функции checkForName('Вадим Некрасов', 'Вадим') возвращает true.`, checkForName('Вадим Некрасов', 'Вадим'));
+console.log(`Вызов функции checkForName('Вадим Некрасов', 'вадим') возвращает false.`, checkForName('Вадим Некрасов', 'вадим'));
+console.log(`Вызов функции checkForName('Вадим Некрасов', 'Дима') возвращает false.`, checkForName('Вадим Некрасов', 'Дима'));
