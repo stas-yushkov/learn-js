@@ -10,7 +10,7 @@
 
 const x1 = 10;
 const x2 = 30;
-const number = 45;
+const number = 50;
 
 console.log(`Число ${number} попадает в отрезок до ${x1}? `, number < x1);
 
