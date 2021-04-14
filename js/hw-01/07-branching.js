@@ -2,6 +2,12 @@
  * Оператор ветвеления if
  */
 
+// console.log("before 'if'")
+// if (5) {
+//   console.log("inside 'if'")
+// }
+// console.log("after 'if'")
+
 // if (5 > 30) {
 //   //  тело
 //   console.log('qweqwe');
@@ -22,7 +28,8 @@
  * Оператор ветвления else...if
  */
 
-const salary = 5000;
+// const salary = 5000;
+// console.log('\n',salary);
 
 // if (salary <= 500) {
 //   console.log('Уровень 1');
@@ -39,7 +46,7 @@ const salary = 5000;
 /*
  * Тернарный оператор
  */
-// const balance = 1000;
+const balance = -1000;
 // let message;
 
 // if (balance >= 0) {
@@ -48,9 +55,9 @@ const salary = 5000;
 //   message = 'Негативный баланс';
 // }
 
-// const message = balance >= 0 ? 'Позитивный баланс' : 'Негативный баланс';
+const message = balance >= 0 ? 'Позитивный баланс' : 'Негативный баланс';
 
-// console.log(message);
+console.log(message);
 
 /*
  * Блочная область видимости переменных
