@@ -1,108 +1,110 @@
-// /*
-//  * Парс числа с Number.parseInt() и Number.parseFloat()
-//  */
+/*
+ * Парс числа с Number.parseInt() и Number.parseFloat()
+ */
 
-// let elementWidth = '50px';
-// elementWidth = Number.parseInt(elementWidth);
-// console.log('elementWidth: ', elementWidth);
+let elementWidth = '50px';
+elementWidth = Number.parseInt(elementWidth);
+console.log('elementWidth: ', elementWidth);
 
-// let elementHeight = '200.74px';
-// elementHeight = Number.parseFloat(elementHeight);
-// console.log('elementHeight: ', elementHeight);
+let elementHeight = '200.74px';
+elementHeight = Number.parseFloat(elementHeight);
+console.log('elementHeight: ', elementHeight);
 
-// /*
-//  * - Метод число.toFixed(digits)
-//  * - Матрёшки на примере  console.log(Number(число.toFixed(digits)))
-//  */
-// let salary = 1300.16472;
-// salary = Number(salary.toFixed(2));
+/*
+ * - Метод число.toFixed(digits)
+ * - Матрёшки на примере  console.log(Number(число.toFixed(digits)))
+ */
+let salary = 1300.16472;
+salary = Number(salary.toFixed(2));
 
-// console.log(salary);
+console.log(salary);
 
-// /*
-//  * - Приведение (преобразование) к числу с Number(value)
-//  * - Значение NaN (Not a Number) и метод Number.isNaN(value)
-//  */
-// let quantity = '30';
-// let value = 'Эту строку невозможно привести к числу';
+/*
+ * - Приведение (преобразование) к числу с Number(value)
+ * - Значение NaN (Not a Number) и метод Number.isNaN(value)
+ */
+let quantity = '30';
+let value = 'Эту строку невозможно привести к числу';
 
-// console.log(Number(quantity));
-// console.log(Number(value));
-// console.log(Number(1));
-// console.log(Number(true));
-// console.log(Number('2'));
+console.log(Number(quantity));
+console.log(Number(value));
+console.log(Number(1));
+console.log(Number(true));
+console.log(Number('2'));
 
-// /*
-//  * Обьект Math
-//  * - Возведение в степень
-//  * - Exponent operator
-//  */
+/*
+ * Обьект Math
+ * - Возведение в степень
+ * - Exponent operator
+ */
 
-// // console.log(Math.PI);
+// console.log(Math.PI);
 
-// // const base = 2;
-// // const power = 5;
+// const base = 2;
+// const power = 5;
 
-// // const result = Math.pow(base, power);
-// // console.log(base ** power);
+// const result = Math.pow(base, power);
+// console.log(base ** power);
 
-// // const base2 = 2;
-// // const power5 = .5;
+// const base2 = 2;
+// const power5 = .5;
 
-// // const result2 = Math.pow(base2, power5);
-// // console.log(base2 ** power5);
+// const result2 = Math.pow(base2, power5);
+// console.log(base2 ** power5);
 
-// /*
-//  * Напиши скрипт который просит пользователя ввести число и степень,
-//  * возводит число в эту степень и выводит результат в консоль
-//  */
+/*
+ * Напиши скрипт который просит пользователя ввести число и степень,
+ * возводит число в эту степень и выводит результат в консоль
+ */
 
-// // //  1. попросить ввести число и сохранить в переменную
-// // let base = prompt('Давай число');
-// // base = Number(base);
-// // console.log(base);
+// //  1. попросить ввести число и сохранить в переменную
+// let base = prompt('Давай число');
+// base = Number(base);
+// console.log(base);
 
-// // //  2. попросить ввести степень и сохранить в переменную
+// //  2. попросить ввести степень и сохранить в переменную
 
-// // let power = prompt('Давай степень');
-// // power = Number(power);
-// // console.log(power);
+// let power = prompt('Давай степень');
+// power = Number(power);
+// console.log(power);
 
-// // //  3. Возвести введенные данные в степень и вывести
-// // const result = base ** power;
+// //  3. Возвести введенные данные в степень и вывести
+// const result = base ** power;
 
-// // console.log(result);
+// console.log(result);
 
-// /*
-//  * Генерим псевдослучайные числа
-//  * - Math.random()
-//  * - Math.round()
-//  */
+/*
+ * Генерим псевдослучайные числа
+ * - Math.random()
+ * - Math.round()
+ */
 
-// // console.log(Math.random());
-// // console.log(Math.round((Math.random()) * 10));
-// // // Math.random() * (max - min) + min
-// // const max = 80;
-// // const min = 10;
+// console.log(Math.random());
+// console.log(Math.round((Math.random()) * 10));
+// // Math.random() * (max - min) + min
+// const max = 80;
+// const min = 10;
 
-// // const result = Math.round(Math.random() * (max - min) + min);
+// const result = Math.round(Math.random() * (max - min) + min);
 
-// // console.log(result);
-
-
+// console.log(result);
 
 
 
 
 
-// // const colors = ['tomato', 'teal', 'orange', 'deeppink', 'skyblue'];
-// // const max = colors.length - 1;
-// // const min = 0;
 
-// // const index = Math.round(Math.random() * (max - min) + min);
 
-// // const color = colors[index];
+// const colors = ['tomato', 'teal', 'orange', 'deeppink', 'skyblue'];
+// const max = colors.length - 1;
+// const min = 0;
 
-// // console.log(color);
+// const index = Math.round(Math.random() * (max - min) + min);
 
-// // document.body.style.backgroundColor = color;
+// const color = colors[index];
+
+// console.log(color);
+
+// document.body.style.backgroundColor = color;
+
+console.log(Boolean(0));
