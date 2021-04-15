@@ -1,4 +1,4 @@
-
+// https://prnt.sc/11gn9gb
 
 // let qq ;
 // console.log(typeof "qdfgvb")
@@ -111,22 +111,120 @@
 //   console.log('лажа');
 // }
 
+// написать программу которая получит от пользователя число (колво минут) и выведет на экран строку в формате часов и минут
+// пример 70 покажет 01:10
+// const globalMinutes = 61;
+// const hours = Math.floor(globalMinutes / 60);
+// const minutes = globalMinutes % 60;
+// console.log(minutes);
+// console.log(hours);
+// const  modifiedHours = String(hours).padStart(2,0);
+// console.log(modifiedHours);
+// const  modifiedMinutes = String(minutes).padStart(2,0);
+// console.log(modifiedMinutes);
+// const time  = `${modifiedHours}:${modifiedMinutes}`;
+// console.log(time);
+// https://prnt.sc/11gmyre
 
 
 
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
+
+// const min1 = 10;
+// const max1 = 100;
+
+// for (let i = min1; i <= max1; i++) {
+//   console.log(i);
+// }
+
+// for (let i = max1; i >= min1; i--) {
+//   console.log(i);
+// }
+
+
+
+
+// четные числа
+// const num1 = 2;
+// const num2 = 10;
+
+// // for (let i = num1; i <= num2; i++) {
+// //   if (i % 2 === 0) {
+// //     console.log(i);
+// //   }
+// // }//етот способ лучше
+
+// for (let i = num1; i <= num2; i += 2) {
+//   console.log(i);
+// }
+
+
+
+//https://prnt.sc/11gny3y
+let input = prompt('введи число больше 100');
+let check = false;
+do {
+  if (Number(input) < 100) {
+    check = true;
+    input = prompt('введи число больше 100')
+  } else {
+    check = false;
+  }
+} while (check); // добавить проверку на null  и что введенное значение цифра.
+
+
+
+// https://prnt.sc/11go8he
+// const  loginInput = prompt('введи свой логин');
+// if (loginInput === 'Админ') {
+//   const passwordInput = prompt('введи пароль');
+//   if (passwordInput) {
+//     if (passwordInput === 'Я_главный') {
+//       console.log('здоров');
+//     } else {
+//       console.log('invalid pass');
+//     }
+//   } else {
+//     console.log('отменено');
+//   }
+// } else {
+//   console.log('я вас не знаю');
+// }
+// 
+
+
+      
+
+
+
+
+// // https://prnt.sc/11gorqa
+// let inputValue = prompt('введи число');
+// let total = 0;
+// let check = false;
+// do {
+//   if (inputValue) {
+//     check = true;
+//     total += Number(inputValue);
+//     inputValue = prompt('введи число');
+//   } else {
+//     check = false;
+//     alert(`общая сумма чисел равна ${total}`);
+//   }
+// } while (inputValue)//https://prnt.sc/11gpheb не успел набрать
+
+
+
+// console.log(indexOf());
+// console.log();
+// console.log();
+// console.log();
+// console.log();
+// console.log();
+// console.log();
+// console.log();
+// console.log();
+// console.log();
+// console.log();
+// console.log();
 
 
