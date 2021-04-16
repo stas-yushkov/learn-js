@@ -159,18 +159,37 @@
 
 
 
-//https://prnt.sc/11gny3y
-let input = prompt('введи число больше 100');
-let check = false;
-do {
-  if (Number(input) < 100) {
-    check = true;
-    input = prompt('введи число больше 100')
-  } else {
-    check = false;
-  }
-} while (check); // добавить проверку на null  и что введенное значение цифра.
+// //https://prnt.sc/11gny3y
+// let input = prompt('введи число больше 100');
+// let check = false;
+// do {
+//   if (Number(input) < 100) {
+//     check = true;
+//     input = prompt('введи число больше 100')
+//   } else {
+//     check = false;
+//   }
+// } while (check); // добавить проверку на null  и что введенное значение цифра.
 
+// 4. Напишите цикл, который предлагает ввести
+// число больше 100 через prompt.
+// Если посетитель ввёл другое
+// число - попросить ввести ещё раз, и так далее.
+// Цикл должен спрашивать число пока посетитель не
+// введёт число, большее 100, либо не нажмёт кнопку
+// Отмена в промпт.
+
+// let input = prompt("Введите число больше 100");
+// let check = false;
+
+// do {
+//   if (Number(input) < 100) {
+//     check = true;
+//     input = prompt("Введите число больше 100");
+//   } else {
+//     check = false;
+//   }
+// } while (check);
 
 
 // https://prnt.sc/11go8he
