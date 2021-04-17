@@ -60,9 +60,25 @@
   // Пиши код выше этой строки
     return result;
   }
+  
+function formatMessage1(message, maxLength) {
+    let result;
+  // Пиши код ниже этой строки
+     if (message.length <= maxLength ) {
+      result = message;
+    } else {
+      result = (message.slice(0, maxLength) + '...');
+    }
+      
+
+  // Пиши код выше этой строки
+    return result;
+  }
 
 
-  console.log(`Вызов функции formatMessage('Curabitur ligula sapien', 23) возвращает 'Curabitur ligula sapien'.`, formatMessage('Curabitur ligula sapien', 23));
+let ggg = formatMessage1('Curabitur ligula sapien', 16) ;
+
+  alert(ggg) ;
   console.log(`Вызов функции formatMessage('Curabitur ligula sapien', 16) возвращает 'Curabitur ligula...'.`, formatMessage('Curabitur ligula sapien', 16));
   console.log(`Вызов функции formatMessage('Vestibulum facilisis purus nec', 20) возвращает 'Vestibulum facilisis...'.`, formatMessage('Vestibulum facilisis purus nec', 20));
   console.log(`Вызов функции formatMessage('Vestibulum facilisis purus nec', 30) возвращает 'Vestibulum facilisis purus nec'.`, formatMessage('Vestibulum facilisis purus nec', 30));
