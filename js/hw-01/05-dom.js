@@ -1,6 +1,7 @@
 const btnAdd = document.querySelector('button[data-add]');
 const valueInput = document.querySelector('input[data-value]')
 
+let total = 0;
 
 console.dir(btnAdd.textContent);
 
@@ -13,5 +14,10 @@ btnAdd.addEventListener('click', function () {
 
   const value = Number(valueInput.value);
 
-  console.log(value);
+  console.log('value', value);
+  
+  total += value;
+  
+  console.log('total', total);
+
 });
