@@ -1,3 +1,3 @@
 const btnAdd = document.querySelector('button');
 
-console.log(btnAdd)
+console.dir(btnAdd)
