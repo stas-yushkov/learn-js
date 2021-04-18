@@ -11,7 +11,7 @@ const outputElement = document.querySelector('p[data-text]');
 const sampleCode = document.querySelector('code[data-code]');
 // https://www.w3schools.com/js/js_htmldom_nodes.asp
 
-sampleCode.textContent = '<!-- <script src="./js/hw-02/01-01___-.js" type="module"></script> -->';
+sampleCode.textContent = '<!-- <script src="./js/hw-02/02-01___-.js" type="module"></script> -->';
 btnGenerate.textContent = 'Сгенерировать';
 valueInputStart.defaultValue = '1';
 valueInputEnd.defaultValue = '32';
@@ -23,10 +23,10 @@ btnGenerate.addEventListener('click', function () {
 
   if (valueStart > 0) {
     for (let i = valueStart; i <= valueEnd; i += 1) {
-      console.log(`<!-- <script src="./js/hw-02/01-${String(i).padStart(2,0)}___-.js" type="module"></script> -->\n`);
+      console.log(`<!-- <script src="./js/hw-02/02-${String(i).padStart(2,0)}___-.js" type="module"></script> -->\n`);
       
       const para = document.createElement("p");
-      const node = document.createTextNode(`<!-- <script src="./js/hw-02/01-${String(i).padStart(2, 0)}___-.js" type="module"></script> -->`);
+      const node = document.createTextNode(`<!-- <script src="./js/hw-02/02-${String(i).padStart(2, 0)}___-.js" type="module"></script> -->`);
       
       para.appendChild(node);
       const element = document.querySelector('section[data-section]');
