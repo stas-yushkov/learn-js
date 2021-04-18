@@ -3,7 +3,7 @@ const resetBtn = document.querySelector('button[data-reset]')
 const valueInput = document.querySelector('input[data-value]')
 const outputElement = document.querySelector('.js-output span');
 
-console.log(resetBtn)
+// console.log(resetBtn)
 
 let total = 0;
 
@@ -27,4 +27,10 @@ btnAdd.addEventListener('click', function () {
   outputElement.textContent = total;
 
   valueInput.value = '';
+});
+
+
+resetBtn.addEventListener('click', function () {
+  total = 0;
+  outputElement.textContent = total;
 });
