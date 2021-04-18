@@ -3,74 +3,35 @@
 // // enter in bash
 // touch 02-{01..32}___-.js
 ////////////////////////////////////////////////////////////////////////////
-// console.log(2)
+console.log('module 2')
 const btnGenerate = document.querySelector('button[data-generate]');
-const btnReset = document.querySelector('button[data-reset]');
 const valueInputStart = document.querySelector('input[data-start-value]')
 const valueInputEnd = document.querySelector('input[data-end-value]')
 const outputElement = document.querySelector('p[data-text]');
-// console.log(btnGenerate)
-// console.log(btnReset)
-// console.log(valueInputStart)
-// console.log(valueInputEnd)
-// console.log(outputElement)
-////////////////////////////////////////////////////////////////////////////
-// // enter in dev console
-// for (let i = 1; i <= 9; i += 1) {
-//   console.log(`<!-- <script src="./js/hw-02/01-0${i}___-.js" type="module"></script> -->`);
-// }
+const sampleCode = document.querySelector('code[data-code]');
+// https://www.w3schools.com/js/js_htmldom_nodes.asp
 
-// for (let i = 10; i <= 32; i += 1) {
-//   console.log(`<!-- <script src="./js/hw-02/01-${i}___-.js" type="module"></script> -->`);
-// }
-////////////////////////////////////////////////////////////////////////////
-
-
-let total = 'nothing to show';
-
-// console.dir(btnAdd.textContent);
-
+sampleCode.textContent = '<!-- <script src="./js/hw-02/01-01___-.js" type="module"></script> -->';
 btnGenerate.textContent = 'Сгенерировать';
 valueInputStart.defaultValue = '1';
 valueInputEnd.defaultValue = '32';
-
-// console.dir(valueInputStart.textContent);
-// console.dir(valueInputStart);
 
 btnGenerate.addEventListener('click', function () {
   console.log('click произошел');
   const valueStart = Number(valueInputStart.value);
   const valueEnd = Number(valueInputEnd.value);
-  // console.log('value', value);
 
-  // const  modifiedHours = String(hours).padStart(2,0);
-  
-  for (let i = valueStart; i <= valueEnd; i += 1) {
-    console.log(`<!-- <script src="./js/hw-02/01-${String(i).padStart(2,0)}___-.js" type="module"></script> -->\n`);
-    outputElement.textContent += `<!-- <script src="./js/hw-02/01-${String(i).padStart(2,0)}___-.js" type="module"></script> -->`;
+  if (valueStart > 0) {
+    for (let i = valueStart; i <= valueEnd; i += 1) {
+      console.log(`<!-- <script src="./js/hw-02/01-${String(i).padStart(2,0)}___-.js" type="module"></script> -->\n`);
+      
+      const para = document.createElement("p");
+      const node = document.createTextNode(`<!-- <script src="./js/hw-02/01-${String(i).padStart(2, 0)}___-.js" type="module"></script> -->`);
+      
+      para.appendChild(node);
+      const element = document.querySelector('section[data-section]');
+
+      element.appendChild(para);
+    }
   }
-
-  // total += value;
-  // console.log('total', total);
-  // outputElement.textContent = total;
-  // valueInputStart.value = '';
 });
-
-
-btnReset.addEventListener('click', function () {
-  // total = 'nothing to show';
-  outputElement.textContent = '';
-});
-
-{/* <div id="div1">
-<p id="p1">This is a paragraph.</p>
-<p id="p2">This is another paragraph.</p>
-</div>
-
-<script>
-var para = document.createElement("p");
-var node = document.createTextNode("This is new.");
-para.appendChild(node);
-var element = document.getElementById("div1");
-element.appendChild(para);
-</script> */}
