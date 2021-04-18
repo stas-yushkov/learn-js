@@ -14,9 +14,51 @@
  * «Оформляем заказ на сумму [сумма] со скидкой [скидка]%»
  */
 
-const totalSpent = 2000;
+// const totalSpent = 2000;
+// const totalSpent = 6000;
+// const totalSpent = 3000;
+// const totalSpent = 500;
+const totalSpent = 50;
 let payment = 500;
 let discount = 0;
+let partner = 'не партнёр'
+
+if (totalSpent >= 100 && totalSpent < 1000) {
+  discount = 0.02;
+  partner = 'бронзовый партнёр'
+  console.log(`${partner}, скидка ${discount*100}%`)
+} else if (totalSpent >= 1000 && totalSpent < 5000) {
+  discount = 0.05;
+  partner = 'серебрянный партрёр'
+  console.log(`${partner}, скидка ${discount*100}%`)
+} else if (totalSpent >= 5000) {
+  discount = 0.1;
+  partner = 'золотой партрёр'
+  console.log(`${partner}, скидка ${discount*100}%`)
+} else {
+  discount = 0;
+  partner = 'не партрёр'
+  console.log(`${partner}, скидка ${discount*100}%`)
+} 
+
+// if (totalSpent < 100) {
+//   discount = 0.00;
+//   partner = 'не партрёр'
+// } else if (totalSpent >= 100 && totalSpent < 1000) {
+//   discount = 0.02;
+//   partner = 'бронзовый партнёр'
+// } else if (totalSpent >= 1000 && totalSpent < 5000) {
+//   discount = 0.05;
+//   partner = 'серебрянный партрёр'
+// } else if (totalSpent >= 5000) {
+//   discount = 0.1;
+//   partner = 'золотой партрёр'
+// } else {
+ 
+// } 
+// console.log(`${partner}, скидка ${discount*100}%`)
+
+console.log(`Оформляем заказ на сумму ${payment} со скидкой ${discount*100}%`)
 
 // 'Бронзовый партнер, скидка 2%'
 // 'Серебрянный партнер, скидка 5%'
