@@ -10,6 +10,6 @@ console.dir(btnAdd.textContent);
 
 btnAdd.addEventListener('click', function () {
   console.log('click dkwmck;wmdw;cm');
-  
-  console.log(valueInput.value);
+
+  console.log(Number(valueInput.value));
 });
