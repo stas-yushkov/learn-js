@@ -14,11 +14,11 @@
  * «Оформляем заказ на сумму [сумма] со скидкой [скидка]%»
  */
 
-// const totalSpent = 2000;
-// const totalSpent = 6000;
-// const totalSpent = 3000;
-// const totalSpent = 500;
-const totalSpent = 50;
+let totalSpent = 2000;
+// let totalSpent = 6000;
+// let totalSpent = 3000;
+// let totalSpent = 500;
+// let totalSpent = 50;
 let payment = 500;
 let discount = 0;
 let partner = 'не партнёр'
@@ -58,7 +58,11 @@ if (totalSpent >= 100 && totalSpent < 1000) {
 // } 
 // console.log(`${partner}, скидка ${discount*100}%`)
 
-console.log(`Оформляем заказ на сумму ${payment} со скидкой ${discount*100}%`)
+payment -= payment * discount;
+console.log(`Оформляем заказ на сумму ${payment} со скидкой ${discount * 100}%`)
+totalSpent += payment;
+console.log(`Общая сумма потраченного в магазине: ${totalSpent}`)
+
 
 // 'Бронзовый партнер, скидка 2%'
 // 'Серебрянный партнер, скидка 5%'
