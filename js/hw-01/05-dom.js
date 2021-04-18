@@ -2,8 +2,6 @@ const btnAdd = document.querySelector('button[data-add]');
 const valueInput = document.querySelector('input[data-value]')
 const outputElement = document.querySelector('.js-output');
 
-console.log(outputElement)
-
 let total = 0;
 
 console.dir(btnAdd.textContent);
@@ -21,7 +19,9 @@ btnAdd.addEventListener('click', function () {
   
   total += value;
   
-  console.log('total', total);
+  // console.log('total', total);
+  
+  outputElement.textContent = `Сумма: ${total}`
 
   valueInput.value = '';
 });
