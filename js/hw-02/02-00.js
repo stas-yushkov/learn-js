@@ -34,24 +34,20 @@ btnGenerate.textContent = 'Сгенерировать';
 valueInputStart.defaultValue = '1';
 valueInputEnd.defaultValue = '32';
 
-console.dir(valueInputStart.textContent);
-console.dir(valueInputStart);
+// console.dir(valueInputStart.textContent);
+// console.dir(valueInputStart);
 
 btnGenerate.addEventListener('click', function () {
-  console.log('click произишел');
+  console.log('click произошел');
   const valueStart = Number(valueInputStart.value);
   const valueEnd = Number(valueInputEnd.value);
   // console.log('value', value);
 
-
-  for (let i = valueStart; i <= 9; i += 1) {
-    // console.log(`<!-- <script src="./js/hw-02/01-0${i}___-.js" type="module"></script> -->\n\n`);
-    outputElement.textContent += `<!-- <script src="./js/hw-02/01-0${i}___-.js" type="module"></script> -->`;
-  }
-
-  for (let i = 10; i <= valueEnd; i += 1) {
-    // console.log(`<!-- <script src="./js/hw-02/01-${i}___-.js" type="module"></script> -->\n\n`);
-    outputElement.textContent += `<!-- <script src="./js/hw-02/01-${i}___-.js" type="module"></script> -->`;
+  // const  modifiedHours = String(hours).padStart(2,0);
+  
+  for (let i = valueStart; i <= valueEnd; i += 1) {
+    console.log(`<!-- <script src="./js/hw-02/01-${String(i).padStart(2,0)}___-.js" type="module"></script> -->\n`);
+    outputElement.textContent += `<!-- <script src="./js/hw-02/01-${String(i).padStart(2,0)}___-.js" type="module"></script> -->`;
   }
 
   // total += value;
@@ -62,6 +58,19 @@ btnGenerate.addEventListener('click', function () {
 
 
 btnReset.addEventListener('click', function () {
-  total = 'nothing to show';
-  outputElement.textContent = total;
+  // total = 'nothing to show';
+  outputElement.textContent = '';
 });
+
+{/* <div id="div1">
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is another paragraph.</p>
+</div>
+
+<script>
+var para = document.createElement("p");
+var node = document.createTextNode("This is new.");
+para.appendChild(node);
+var element = document.getElementById("div1");
+element.appendChild(para);
+</script> */}
