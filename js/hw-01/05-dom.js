@@ -20,4 +20,5 @@ btnAdd.addEventListener('click', function () {
   
   console.log('total', total);
 
+  valueInput.value = '';
 });
