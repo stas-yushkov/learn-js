@@ -1,7 +1,7 @@
 const btnAdd = document.querySelector('button[data-add]');
 const valueInput = document.querySelector('input[data-value]')
 
-console.log(valueInput);
+console.log(valueInput.value);
 
 console.dir(btnAdd.textContent);
 
