@@ -1,5 +1,8 @@
 const btnAdd = document.querySelector('button[data-add]');
 const valueInput = document.querySelector('input[data-value]')
+const outputElement = document.querySelector('.js-output');
+
+console.log(outputElement)
 
 let total = 0;
 
