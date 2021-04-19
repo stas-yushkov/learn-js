@@ -295,8 +295,8 @@
 // ATTEMPT
 
 function squareDigits(num){
-
-  const array = parseInt(num).toString().split('');
+  const array = num.toString().split('');
+  // const array = parseInt(num).toString().split('');// if input isn't int
   
   for (let index = 0; index < array.length; index++) {
     array.splice(index, 1, (array[index] ** 2));
