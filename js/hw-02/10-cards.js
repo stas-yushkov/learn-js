@@ -69,3 +69,7 @@ console.table(cards);
 
 
 const cardToUpdate = 'Карточка-4';
+const index = cards.indexOf(cardToUpdate);
+
+cards.splice(index,1, 'Обновленная-Карточка-4');
+console.table(cards);
