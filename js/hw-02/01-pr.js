@@ -95,3 +95,5 @@ function calculateAverage() {
 
 calculateAverage(2,5,6,8,9,10);
 console.log(calculateAverage(20,'ee',10));
+
+/////////////////////////////////////////////////////////////////////////////////////////
