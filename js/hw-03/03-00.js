@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////
 // // https://askubuntu.com/questions/605558/how-to-create-multiple-files-with-the-terminal
 // // enter in bash
-// touch 02-{01..32}___-.js
+// touch 03-{01..41}___-.js
 ////////////////////////////////////////////////////////////////////////////
 console.log('module 3')
 const btnGenerate = document.querySelector('button[data-generate]');
