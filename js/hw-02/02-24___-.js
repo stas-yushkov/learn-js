@@ -60,5 +60,6 @@
 function checkFruit(fruit) {
   const fruits = ['яблоко', 'слива', 'груша', 'апельсин'];
 
-  return; // Дополни эту строку
+
+  return fruits.includes(fruit); // Дополни эту строку
 }
