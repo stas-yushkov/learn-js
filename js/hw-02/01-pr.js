@@ -119,11 +119,114 @@
 // console.log(findLongestWord('sdf dd dsdfws hfhfhfhhfhfhfhfhhfhfhfh ')); // TODO:  //добавить проверку когда все слова равны. простовывести в ретурн что слова все равны
 ////////////////////////////////////////////////////////////////////////////////////////
 
-function greet(name) {
-  if (typeof name !== 'string') {
-    return;
-  }
-  return name ? ` Hello, ${name}` : `Hello, guest`;
-}
+// function greet(name) {
+//   if (typeof name !== 'string') {
+//     return 'Hello, guest'; // токо ради Жени)))
+//   }
+//   return name ? ` Hello, ${name}` : 'Hello, guest';
+// }
 
-console.log(greet('Gosha'));
+// console.log(greet('Gosha'));
+
+////////////////////////////////////////////////////////////////////////////////////
+
+
+// const colors = ['red','yellow', 'blue', 'green'];
+
+// function findTheColor(colorName) {
+//   if (typeof colorName !== 'string') {
+//     return;
+//   }
+
+//   return colors.includes(colorName);/// add indexof color of array and return in template string TODO: спасибо Жене)))
+// }
+
+// console.log(findTheColor('yellow'));
+
+// ////////////////////////////////////////////////////////////////////////////////////
+
+// // function checkNumbers(a,b){
+// //   if (a>b){
+// //     return `number ${a} greater than ${b}`;
+// //   }
+// //   return `number ${b} greater than ${a}`;
+
+
+
+// // }
+
+// const checkNumbers = (a,b) => {
+//   return a>b?  `number ${a} greater than ${b}`:  `number ${b} greater than ${a}`;
+// }
+
+///////////////////////////////////////////////////////////////////////////////////
+
+// // // // function mult(x,y,z){
+// // // //   return x*y*z;
+// // // // }
+
+
+// // // const mult = (x,y,z) => x*y*z;
+
+// // const mult = (x,y,z) => (x*y*z);
+
+// const mult = (x,y,z) => {
+//   return  x*y*z;
+// };
+//////////////////////////////////////////////////////////////////////////////////
+
+
+// const courses = ['qqq', 'wwww', 'eee eee', 'rtrt'];
+
+// const addCourse = name => courses.push(name);
+
+// addCourse('new fjfjfjfj');
+
+// const removeCourse = (name) => {
+//   const index = courses.indexOf(name);
+
+//   if (index !== -1) {
+//     courses.splice(index, 1);
+//   }
+//   return courses;
+// }
+
+// removeCourse('wwww');
+
+// const updateCourse = (oldName, newName) => {
+//   const index = courses.indexOf(oldName);
+
+//   if(index !== -1) {
+//     courses.splice(index, 1, newName);
+//   }
+
+//   return courses;
+
+
+// }
+
+
+// updateCourse('qqq', 'wewewewew')
+
+// console.log(courses);
+// //TODO: проверить на строку, регистр, если нету значения то вернуть строку что не сработало
+
+//////////////////////////////////////////////////////////////////////////////////
+
+
+// //declaration and expression
+
+// x();//сработает изза hoisting
+// // y();//не сработает
+
+// //declaration
+// function x() {console.log('declaration')};
+
+// //expression
+
+// const y = function () {console.log('expression')};
+
+// y();//сработает после expression
+
+
+//////////////////////////////////////////////////////////////////////////////////
