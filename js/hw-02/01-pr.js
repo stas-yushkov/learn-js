@@ -77,23 +77,53 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 
 
-function calculateAverage() {
-  const args = arguments;
-  let sum = 0;
-  let totalCount = 0;
+// function calculateAverage() {
+//   const args = arguments;
+//   let sum = 0;
+//   let totalCount = 0;
 
-  for (const arg of args) {
-    if (typeof arg !== 'number') {
-      continue;
-    } else {
-      sum += arg;
-      totalCount ++;
-    }
+//   for (const arg of args) {
+//     if (typeof arg !== 'number') {
+//       continue;
+//     } else {
+//       sum += arg;
+//       totalCount ++;
+//     }
+//   }
+//   return sum / totalCount;
+// }
+
+// calculateAverage(2,5,6,8,9,10);
+// console.log(calculateAverage(20,'ee',10, [10,10]));// TODO:  //посчитать вложенный массив 
+
+// /////////////////////////////////////////////////////////////////////////////////////////
+
+// function findLongestWord(randomWords) {
+//   if(typeof randomWords !== 'string') {
+//     return;
+//   }
+
+//   const splittedWords = randomWords.split(' ');
+//   console.log(splittedWords);
+
+//   let longestWord = splittedWords[0];
+
+//   for (const word of splittedWords) {
+//     if (longestWord.length < word.length) {
+//       longestWord = word;
+//     }
+//   }
+//   return longestWord;
+// }
+
+// console.log(findLongestWord('sdf dd dsdfws hfhfhfhhfhfhfhfhhfhfhfh ')); // TODO:  //добавить проверку когда все слова равны. простовывести в ретурн что слова все равны
+////////////////////////////////////////////////////////////////////////////////////////
+
+function greet(name) {
+  if (typeof name !== 'string') {
+    return;
   }
-  return sum / totalCount;
+  return name ? ` Hello, ${name}` : `Hello, guest`;
 }
 
-calculateAverage(2,5,6,8,9,10);
-console.log(calculateAverage(20,'ee',10));
-
-/////////////////////////////////////////////////////////////////////////////////////////
+console.log(greet('Gosha'));
