@@ -68,12 +68,21 @@ const add = function (param_x, param_y) {
   //....
   console.log(param_x)
   console.log(param_y)
+
+  // const result = param_x + param_y;
+  // console.log('x + y =',result)
   console.log('function "add" is executing')
+
+  return param_x + param_y;
 }
+// const arg_x = 1;
+// const arg_y = 2;
+// add(arg_x, arg_y);
+
+const r1 = add(5, 3);
+console.log('r1 = ', r1);
 
 
 
-const arg_x = 1;
-const arg_y = 2;
 
-add(arg_x,arg_y);
+
