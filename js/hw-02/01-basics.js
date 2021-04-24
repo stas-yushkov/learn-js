@@ -62,27 +62,35 @@
 // console.table(friends);
 
 
-///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
 
-const add = function (param_x, param_y) {
-  //....
-  console.log(param_x)
-  console.log(param_y)
+// const add = function (param_x, param_y) {
+//   //....
+//   console.log(param_x)
+//   console.log(param_y)
 
-  // const result = param_x + param_y;
-  // console.log('x + y =',result)
-  console.log('function "add" is executing')
+//   // const result = param_x + param_y;
+//   // console.log('x + y =',result)
+//   console.log('function "add" is executing')
 
-  return param_x + param_y;
-}
-// const arg_x = 1;
-// const arg_y = 2;
-// add(arg_x, arg_y);
+//   return param_x + param_y;
+// };
+// // const arg_x = 1;
+// // const arg_y = 2;
+// // add(arg_x, arg_y);
 
-const r1 = add(5, 3);
-console.log('r1 = ', r1);
+// const r1 = add(5, 3);
+// console.log('r1 = ', r1);
+///////////////////////////////////////////////////////
 
+const fn = function () {
+  console.log(1);
+  console.log(2);
+  console.log(3);
 
+  return 111;
+};
 
+console.log(fn());
 
 
