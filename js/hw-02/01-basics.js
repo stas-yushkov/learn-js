@@ -108,18 +108,18 @@
  */
 const fnA = function () {
   console.log('Выполняется функция A');
-  // fnB();
+  fnB();
 };
 
 const fnB = function () {
   console.log('Выполняется функция B');
   
-  console.log(value);//stack trace
-  // fnC();
+  fnC();
 };
 
 const fnC = function () {
   console.log('Выполняется функция C');
+  console.log(value);//stack trace
 };
 
 // function main - весь файл
