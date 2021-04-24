@@ -83,21 +83,51 @@
 // console.log('r1 = ', r1);
 ///////////////////////////////////////////////////////
 
-const fn = function (value) {
-  console.log(1);
-  console.log(2);
-  console.log(3);
-  // return 111;
-  if (value < 50) {
-    return 'less than 50';
-  }
+// const fn = function (value) {
+//   console.log(1);
+//   console.log(2);
+//   console.log(3);
+//   // return 111;
+//   if (value < 50) {
+//     return 'less than 50';
+//   }
   
-  return 'greater than 50';
+//   return 'greater than 50';
+//   // return 5,10,4;
   
 
+// };
+
+// console.log(fn(10));
+// console.log(fn(1000));
+
+///////////////////////////////////////////////////////
+/*
+ * - Стек вызовов
+ * - Stack trace и поиск ошибок
+ */
+const fnA = function () {
+  console.log('Выполняется функция A');
 };
 
-console.log(fn(10));
-console.log(fn(1000));
+const fnB = function () {
+  console.log('Выполняется функция B');
+};
 
+const fnC = function () {
+  console.log('Выполняется функция C');
+};
 
+// console.log('Лог перед вызовом функции A');
+
+fnA();
+
+// console.log('Лог после вызова функции A');
+
+// console.log('Лог перед вызовом функции B');
+fnB();
+// console.log('Лог после вызова функции B');
+
+// console.log('Лог перед вызовом функции C');
+fnC();
+// console.log('Лог после вызова функции C');
