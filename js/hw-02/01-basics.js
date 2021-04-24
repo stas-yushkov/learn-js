@@ -90,9 +90,9 @@ const fn = function (value) {
   // return 111;
   if (value < 50) {
     return 'less than 50';
-  } else {
+  } 
     return 'greater than 50';
-  }
+  
 
 };
 
