@@ -108,12 +108,14 @@
  */
 const fnA = function () {
   console.log('Выполняется функция A');
-  fnB();
+  // fnB();
 };
 
 const fnB = function () {
   console.log('Выполняется функция B');
-  fnC();
+  
+  console.log(value);//stack trace
+  // fnC();
 };
 
 const fnC = function () {
@@ -130,11 +132,11 @@ fnA();
 // console.log('Лог после вызова функции A');
 
 // console.log('Лог перед вызовом функции B');
-// fnB();
+fnB();
 // console.log('Лог после вызова функции B');
 
 // console.log('Лог перед вызовом функции C');
-// fnC();
+fnC();
 // console.log('Лог после вызова функции C');
 
 // console.log( console.log( 2));
