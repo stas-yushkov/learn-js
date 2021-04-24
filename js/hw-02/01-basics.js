@@ -83,14 +83,20 @@
 // console.log('r1 = ', r1);
 ///////////////////////////////////////////////////////
 
-const fn = function () {
+const fn = function (value) {
   console.log(1);
   console.log(2);
   console.log(3);
+  // return 111;
+  if (value < 50) {
+    return 'less than 50';
+  } else {
+    return 'greater than 50';
+  }
 
-  return 111;
 };
 
-console.log(fn());
+console.log(fn(10));
+console.log(fn(1000));
 
 
