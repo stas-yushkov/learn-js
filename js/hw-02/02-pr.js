@@ -60,7 +60,7 @@ const ex5 = '[104, 67, 54, 89, 2, 19]';
 function findSmallestNumber(numbers) {
   if (!Array.isArray(numbers)){
     return "Argument isn't an array";
-  } //валидировать массив TODO:  //валидировать массив 
+  } //валидировать массив 
 
   let min = numbers[0];
 
