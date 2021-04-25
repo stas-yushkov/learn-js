@@ -77,52 +77,64 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 
 
-function calculateAverage(...args) {
-  // let args = arguments;
-  let sum = 0;
-  let totalCount = 0;
+// function calculateAverage(...args) {
+//   // let args = arguments;
+//   let sum = 0;
+//   let totalCount = 0;
 
-  for (const arg of args) {
-    if (Array.isArray(arg)) {
-      args.splice(args.length, 0, ...arg)
-      // sum += arg;
-      // totalCount ++;
-    } else if (typeof arg !== 'number') {
-      continue;
-    } else {
-      sum += arg;
-      totalCount ++;
-    }
-  }
-  console.log('sum', sum);
-  console.log('totalCount', totalCount);
-  return sum / totalCount;
-}
+//   for (const arg of args) {
+//     if (Array.isArray(arg)) {
+//       args.splice(args.length, 0, ...arg)
+//       // sum += arg;
+//       // totalCount ++;
+//     } else if (typeof arg !== 'number') {
+//       continue;
+//     } else {
+//       sum += arg;
+//       totalCount ++;
+//     }
+//   }
+//   console.log('sum', sum);
+//   console.log('totalCount', totalCount);
+//   return sum / totalCount;
+// }
 
-// calculateAverage(2,5,6,8,9,10);
-console.log(calculateAverage(20,'ee',10, [10,10]));  //посчитать вложенный массив 
+// // calculateAverage(2,5,6,8,9,10);
+// console.log(calculateAverage(20,'ee',10, [10,10]));  //посчитать вложенный массив 
 
 // /////////////////////////////////////////////////////////////////////////////////////////
 
 // function findLongestWord(randomWords) {
 //   if(typeof randomWords !== 'string') {
-//     return;
+//     return "input arg must be a 'string'";
 //   }
 
 //   const splittedWords = randomWords.split(' ');
-//   console.log(splittedWords);
+//   console.log('splittedWords: ', splittedWords);
 
 //   let longestWord = splittedWords[0];
+//   const equalLongestWords = [];
 
 //   for (const word of splittedWords) {
 //     if (longestWord.length < word.length) {
 //       longestWord = word;
 //     }
 //   }
-//   return longestWord;
+
+//   for (const word of splittedWords) {
+//     if (longestWord.length === word.length) {
+//       equalLongestWords.push(word);
+//     }
+//   }
+
+//   if (equalLongestWords.length === splittedWords.length) {
+//     return 'Length of all the words are equal to each other'
+//   }
+//   return `first longestWord is ${longestWord}, \n there is ${equalLongestWords.length} equalLongestWords: ${[equalLongestWords]}`;
 // }
 
-// console.log(findLongestWord('sdf dd dsdfws hfhfhfhhfhfhfhfhhfhfhfh ')); // TODO:  //добавить проверку когда все слова равны. простовывести в ретурн что слова все равны
+// console.log(findLongestWord('01 11 2 13')); 
+//  //добавить проверку когда все слова равны. простовывести в ретурн что слова все равны
 ////////////////////////////////////////////////////////////////////////////////////////
 
 // function greet(name) {
@@ -137,17 +149,23 @@ console.log(calculateAverage(20,'ee',10, [10,10]));  //посчитать вло
 ////////////////////////////////////////////////////////////////////////////////////
 
 
-// const colors = ['red','yellow', 'blue', 'green'];
+const colors = ['red','yellow', 'blue', 'green'];
 
-// function findTheColor(colorName) {
-//   if (typeof colorName !== 'string') {
-//     return;
-//   }
+function findTheColor(colorName) {
+  if (typeof colorName !== 'string') {
+    return "arg type must be 'string'";
+  }
 
-//   return colors.includes(colorName);/// add indexof color of array and return in template string TODO: спасибо Жене)))
-// }
+  if (colors.includes(colorName)) {
+    return `${colorName} is founded in colors: ${colors} \nwith index: ${colors.indexOf(colorName)}`;  
+  }
 
-// console.log(findTheColor('yellow'));
+  return "can't find color";
+  
+// add indexof color of array and return in template string
+}
+
+console.log(findTheColor('yellow'));
 
 // ////////////////////////////////////////////////////////////////////////////////////
 
