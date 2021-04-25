@@ -50,16 +50,29 @@
 //  *   для которых есть аналог в оригинальном массиве.
 //  */
 
-const filterNumbers = function (array, ...args) {
-  console.log('array: ', array);
-  console.log('args: ', args);
+// const filterNumbers = function (array, ...args) {
+//   console.log('array: ', array);
+//   console.log('args: ', args);
+//   const uniqueElements = [];
+
+//   for (const element of array) {
+//     if (args.includes(element)) {
+//       uniqueElements.push(element);
+
+//       console.log(`${element} есть везде!`);
+//     }
+//   }
+
+//   return uniqueElements;
+// };
+
+const filterNumbers = (array, ...args) => {
   const uniqueElements = [];
 
   for (const element of array) {
     if (args.includes(element)) {
       uniqueElements.push(element);
 
-      console.log(`${element} есть везде!`);
     }
   }
 
