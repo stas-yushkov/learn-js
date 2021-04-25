@@ -55,24 +55,24 @@
 // console.table(bubbleSort(ex4));
 
 // //////////////////////////////////////////////////////////////////////////////////////////
-// const ex5 = [104, 67, 54, 89, 2, 19];
+const ex5 = '[104, 67, 54, 89, 2, 19]';
 
-// function findSmallestNumber(numbers) {
-//   if (typeof numbers !== "array"){
-//     return;
-//   } //валидировать массив TODO:  //валидировать массив 
+function findSmallestNumber(numbers) {
+  if (!Array.isArray(numbers)){
+    return "Argument isn't an array";
+  } //валидировать массив TODO:  //валидировать массив 
 
-//   let min = numbers[0];
+  let min = numbers[0];
 
-//   for (const number of numbers) {
-//     if (min > number) {
-//       min = number;
-//     }
-//   }
-//   return min;
-// }
+  for (const number of numbers) {
+    if (min > number) {
+      min = number;
+    }
+  }
+  return min;
+}
 
-// console.log(findSmallestNumber(ex5));
+console.log(findSmallestNumber(ex5));
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
