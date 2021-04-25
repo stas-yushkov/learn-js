@@ -200,40 +200,67 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-// const courses = ['qqq', 'wwww', 'eee eee', 'rtrt'];
+const courses = ['qqq', 'wwww', 'eee eee', 'rtrt'];
 
-// const addCourse = name => courses.push(name);
+const addCourse = name => courses.push(name);
 
-// addCourse('new fjfjfjfj');
+addCourse('new fjfjfjfj');
 
-// const removeCourse = (name) => {
-//   const index = courses.indexOf(name);
+const removeCourse = (name) => {
+  const index = courses.indexOf(name);
 
-//   if (index !== -1) {
-//     courses.splice(index, 1);
-//   }
-//   return courses;
-// }
+  if (index !== -1) {
+    courses.splice(index, 1);
+  }
+  return courses;
+}
 
-// removeCourse('wwww');
+removeCourse('wwww');
 
-// const updateCourse = (oldName, newName) => {
-//   const index = courses.indexOf(oldName);
+const  updateCourse = function(oldName, newName)  {
+  const index = courses.indexOf(oldName);
+  // console.log(...arguments);
 
-//   if(index !== -1) {
-//     courses.splice(index, 1, newName);
-//   }
+  for (const arg of arguments) {
+    if (typeof arg !== 'string') {
+      console.log(`typeof arg '${arg}' !== 'string' \ncan't update courses`);
 
-//   return courses;
+      return ;
+    }
+
+    if (arg !== arg.toLowerCase()) {
+      console.log(`arg '${arg}' must be in LowerCase \ncan't update courses`);
+
+      return ;
+    }
+  }
+  if (!courses.includes(oldName)) {
+    console.log(`courses not includes(oldName) \ncan't update courses`);
+
+    return ;
+  }  
+  
+
+  if(index !== -1) {
+    courses.splice(index, 1, newName);
+  }
+
+  return courses;
 
 
-// }
+}
 
 
+
+
+// updateCourse('qqq', 'wewewewew', 2)
+updateCourse('qqq', 'wewewewew')
 // updateCourse('qqq', 'wewewewew')
+// updateCourse("2",'qqq')
 
-// console.log(courses);
-// //TODO: проверить на строку, регистр, если нету значения то вернуть строку что не сработало
+console.log(courses);
+//проверить на строку, регистр, 
+// если нету значения то вернуть строку что не сработало
 
 //////////////////////////////////////////////////////////////////////////////////
 
