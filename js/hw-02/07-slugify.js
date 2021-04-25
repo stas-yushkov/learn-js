@@ -12,7 +12,7 @@
 //   return string.toLowerCase().split(' ').join('-');
 // };
 
-const slugify = (string) =>  string.toLowerCase().split(' ').join('-');
+const slugify = string =>  string.toLowerCase().split(' ').join('-');
 
 console.log(slugify('Top 10 benefits of React framework'));
 console.log(slugify('Azure Static Web Apps are Awesome'));
