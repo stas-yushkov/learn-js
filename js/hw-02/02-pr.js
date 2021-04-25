@@ -100,7 +100,7 @@ function calculateAverage(...args) {
 }
 
 // calculateAverage(2,5,6,8,9,10);
-console.log(calculateAverage(20,'ee',10, [10,10]));// TODO:  //посчитать вложенный массив 
+console.log(calculateAverage(20,'ee',10, [10,10]));  //посчитать вложенный массив 
 
 // /////////////////////////////////////////////////////////////////////////////////////////
 
