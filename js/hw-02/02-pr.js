@@ -149,23 +149,23 @@
 ////////////////////////////////////////////////////////////////////////////////////
 
 
-const colors = ['red','yellow', 'blue', 'green'];
+// const colors = ['red','yellow', 'blue', 'green'];
 
-function findTheColor(colorName) {
-  if (typeof colorName !== 'string') {
-    return "arg type must be 'string'";
-  }
+// function findTheColor(colorName) {
+//   if (typeof colorName !== 'string') {
+//     return "arg type must be 'string'";
+//   }
 
-  if (colors.includes(colorName)) {
-    return `${colorName} is founded in colors: ${colors} \nwith index: ${colors.indexOf(colorName)}`;  
-  }
+//   if (colors.includes(colorName)) {
+//     return `${colorName} is founded in colors: ${colors} \nwith index: ${colors.indexOf(colorName)}`;  
+//   }
 
-  return "can't find color";
+//   return "can't find color";
   
-// add indexof color of array and return in template string
-}
+// // add indexof color of array and return in template string
+// }
 
-console.log(findTheColor('yellow'));
+// console.log(findTheColor('yellow'));
 
 // ////////////////////////////////////////////////////////////////////////////////////
 
