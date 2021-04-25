@@ -55,46 +55,52 @@
 // console.table(bubbleSort(ex4));
 
 // //////////////////////////////////////////////////////////////////////////////////////////
-const ex5 = '[104, 67, 54, 89, 2, 19]';
+// const ex5 = '[104, 67, 54, 89, 2, 19]';
 
-const findSmallestNumber = (numbers) => {
-  if (!Array.isArray(numbers)){
-    return "Argument isn't an array";
-  } //валидировать массив 
+// const findSmallestNumber = (numbers) => {
+//   if (!Array.isArray(numbers)){
+//     return "Argument isn't an array";
+//   } //валидировать массив 
 
-  let min = numbers[0];
+//   let min = numbers[0];
 
-  for (const number of numbers) {
-    if (min > number) {
-      min = number;
-    }
-  }
-  return min;
-}
+//   for (const number of numbers) {
+//     if (min > number) {
+//       min = number;
+//     }
+//   }
+//   return min;
+// }
 
-console.log(findSmallestNumber(ex5));
+// console.log(findSmallestNumber(ex5));
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
 
-// function calculateAverage() {
-//   const args = arguments;
-//   let sum = 0;
-//   let totalCount = 0;
+function calculateAverage(...args) {
+  // let args = arguments;
+  let sum = 0;
+  let totalCount = 0;
 
-//   for (const arg of args) {
-//     if (typeof arg !== 'number') {
-//       continue;
-//     } else {
-//       sum += arg;
-//       totalCount ++;
-//     }
-//   }
-//   return sum / totalCount;
-// }
+  for (const arg of args) {
+    if (Array.isArray(arg)) {
+      args.splice(args.length, 0, ...arg)
+      // sum += arg;
+      // totalCount ++;
+    } else if (typeof arg !== 'number') {
+      continue;
+    } else {
+      sum += arg;
+      totalCount ++;
+    }
+  }
+  console.log('sum', sum);
+  console.log('totalCount', totalCount);
+  return sum / totalCount;
+}
 
 // calculateAverage(2,5,6,8,9,10);
-// console.log(calculateAverage(20,'ee',10, [10,10]));// TODO:  //посчитать вложенный массив 
+console.log(calculateAverage(20,'ee',10, [10,10]));// TODO:  //посчитать вложенный массив 
 
 // /////////////////////////////////////////////////////////////////////////////////////////
 
