@@ -10,32 +10,36 @@ const feedback = {
 
 let totalFeedback = 0;
 
-console.log(Number('1'));
+// console.log(Number('1'));
 Boolean;
 Array;
 Array;
 const keys = Object.keys(feedback);
 
-console.log(keys);
+// console.log(keys);
 
-for (const key of keys) {
-  console.log(key);
-  console.log(feedback[key]);
-  // console.log(feedback[key]);
+// for (const key of keys) {
+//   console.log(key);
+//   console.log(feedback[key]);
+//   // console.log(feedback[key]);
 
-  totalFeedback += feedback[key];
-}
+//   totalFeedback += feedback[key];
+// }
 
 // console.log('totalFeedback: ', totalFeedback);
 
 const values = Object.values(feedback);
 
-// console.log(values);
+console.log(values);
 
-// for (const value of values) {
-//   console.log(value);
+for (const value of values) {
+  console.log(value);
 
-//   totalFeedback += value;
-// }
+  totalFeedback += value;
+}
 
-// console.log('totalFeedback: ', totalFeedback);
+console.log('totalFeedback: ', totalFeedback);
+
+// const entries = Object.entries(feedback);
+
+// console.log(entries);
