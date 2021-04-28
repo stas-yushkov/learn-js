@@ -91,7 +91,7 @@ const rgb = [255, 100, 80];
 
 const [red, , blue] = rgb;
 
-console.log(red, blue);
+// console.log(red, blue);
 
 const authors = {
   kiwi: 4,
@@ -102,8 +102,20 @@ const authors = {
 
 const entries = Object.entries(authors);
 
-// console.log(entries);
+console.log(entries);
 
+// for (const entry of entries) {
+//   console.log(entry);
+// }
+
+// for (const entry of entries) {
+//   const [name, rating] = entry;
+//   console.log(name, rating);
+// }
+
+for (const [name, rating] of entries) {
+  console.log(name, rating);
+}
 // for (const [name, rating] of entries) {
 //   // ур2
 //   // const [name, rating] = entry;
