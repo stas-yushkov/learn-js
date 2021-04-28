@@ -67,21 +67,21 @@ const {
   stats: { followers, views, likes },
 } = profile;
 
-console.log(
-  name,
-  '\n',
-  tag,
-  '\n',
-  location,
-  '\n',
-  avatar,
-  '\n',
-  followers,
-  '\n',
-  views,
-  '\n',
-  likes,
-);
+// console.log(
+//   name,
+//   '\n',
+//   tag,
+//   '\n',
+//   location,
+//   '\n',
+//   avatar,
+//   '\n',
+//   followers,
+//   '\n',
+//   views,
+//   '\n',
+//   likes,
+// );
 
 /*
  * Деструктуризация массивов
@@ -91,7 +91,7 @@ const rgb = [255, 100, 80];
 
 const [red, green, blue] = rgb;
 
-// console.log(red, green, blue);
+console.log(red, green, blue);
 
 const authors = {
   kiwi: 4,
