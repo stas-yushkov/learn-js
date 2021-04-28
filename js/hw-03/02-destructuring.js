@@ -12,8 +12,8 @@ const playlist = {
   author: 'me',
 };
 
-const { name, rating, tracks, trackCount, author = 555 } = playlist;
-console.log(name, rating, tracks, trackCount, author);
+// const { name, rating, tracks, trackCount, author = 'somebody' } = playlist; //деструктуризация
+// console.log(name, rating, tracks, trackCount, author);
 
 // console.log(
 //   playlist.name,
@@ -41,27 +41,23 @@ console.log(name, rating, tracks, trackCount, author);
  * Глубокая деструктуризация
  */
 
-// const profile = {
-//   name: 'Jacques Gluke',
-//   tag: 'jgluke',
-//   location: 'Ocho Rios, Jamaica',
-//   avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/r_oy/128.jpg',
-//   stats: {
-//     followers: 5603,
-//     views: 4827,
-//     likes: 1308,
-//   },
-// };
+const profile = {
+  name: 'Jacques Gluke',
+  tag: 'jgluke',
+  location: 'Ocho Rios, Jamaica',
+  avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/r_oy/128.jpg',
+  stats: {
+    followers: 5603,
+    views: 4827,
+    likes: 1308,
+  },
+};
 
-// const {
-//   avatar,
-//   name,
-//   tag,
-//   location,
-//   stats: { followers, views, likes },
-// } = profile;
+const { avatar, name, tag, location, stats } = profile;
 
-// console.log(name, tag, location, avatar, followers, views, likes);
+const { followers, views, likes } = stats;
+
+console.log(name, tag, location, avatar, followers, views, likes);
 
 /*
  * Деструктуризация массивов
@@ -129,16 +125,16 @@ const showProfileInfo = function (userProfile) {
   console.log(restProps);
 };
 
-const profile = {
-  name: 'Jacques Gluke',
-  tag: 'jgluke',
-  location: 'Ocho Rios, Jamaica',
-  avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/r_oy/128.jpg',
-  stats: {
-    followers: 5603,
-    views: 4827,
-    likes: 1308,
-  },
-};
+// const profile = {
+//   name: 'Jacques Gluke',
+//   tag: 'jgluke',
+//   location: 'Ocho Rios, Jamaica',
+//   avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/r_oy/128.jpg',
+//   stats: {
+//     followers: 5603,
+//     views: 4827,
+//     likes: 1308,
+//   },
+// };
 
 // showProfileInfo(profile);
