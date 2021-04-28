@@ -25,14 +25,14 @@ const cart = {
   decreaseQuantity(productName) {},
 };
 
-// console.table(cart.getItems());
+console.table(cart.getItems());
 
 cart.add({ name: '🍎', price: 50 });
 cart.add({ name: '🍋', price: 60 });
 cart.add({ name: '🍋', price: 60 });
 cart.add({ name: '🍓', price: 110 });
 
-// console.table(cart.getItems());
+console.table(cart.getItems());
 
 cart.remove('🍎');
 // console.table(cart.getItems());
