@@ -41,17 +41,17 @@ const playlist = {
  * Глубокая деструктуризация
  */
 
-const profile = {
-  name: 'Jacques Gluke',
-  tag: 'jgluke',
-  location: 'Ocho Rios, Jamaica',
-  avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/r_oy/128.jpg',
-  stats: {
-    followers: 5603,
-    views: 4827,
-    likes: 1308,
-  },
-};
+// const profile = {
+//   name: 'Jacques Gluke',
+//   tag: 'jgluke',
+//   location: 'Ocho Rios, Jamaica',
+//   avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/r_oy/128.jpg',
+//   stats: {
+//     followers: 5603,
+//     views: 4827,
+//     likes: 1308,
+//   },
+// };
 
 // const { avatar, name, tag, location, stats } = profile;
 
@@ -59,13 +59,13 @@ const profile = {
 
 // console.log(name, tag, location, avatar, followers, views, likes);
 
-const {
-  avatar,
-  name,
-  tag,
-  location,
-  stats: { followers, views, likes },
-} = profile;
+// const {
+//   avatar,
+//   name,
+//   tag,
+//   location,
+//   stats: { followers, views, likes },
+// } = profile;
 
 // console.log(
 //   name,
@@ -102,7 +102,7 @@ const authors = {
 
 const entries = Object.entries(authors);
 
-console.log(entries);
+// console.log(entries);
 
 // for (const entry of entries) {
 //   console.log(entry);
@@ -113,9 +113,9 @@ console.log(entries);
 //   console.log(name, rating);
 // }
 
-for (const [name, rating] of entries) {
-  console.log(name, rating);
-}
+// for (const [name, rating] of entries) {
+//   console.log(name, rating);
+// }
 // for (const [name, rating] of entries) {
 //   // ур2
 //   // const [name, rating] = entry;
@@ -142,6 +142,19 @@ for (const [name, rating] of entries) {
 //   },
 // };
 
+// const { name, tag, location } = profile;
+
+// const restProps = {
+//   avatar: profile.avatar,
+//   stats: profile.stats,
+// };
+
+// // const { name, tag, location, ...restProps } = profile;
+
+// console.log(name, tag, location);
+// console.log(restProps);
+// // console.log(profile);
+
 // const { name, tag, location, ...restProps } = profile;
 
 // console.log(name, tag, location);
@@ -161,16 +174,16 @@ const showProfileInfo = function (userProfile) {
   console.log(restProps);
 };
 
-// const profile = {
-//   name: 'Jacques Gluke',
-//   tag: 'jgluke',
-//   location: 'Ocho Rios, Jamaica',
-//   avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/r_oy/128.jpg',
-//   stats: {
-//     followers: 5603,
-//     views: 4827,
-//     likes: 1308,
-//   },
-// };
+const profile = {
+  name: 'Jacques Gluke',
+  tag: 'jgluke',
+  location: 'Ocho Rios, Jamaica',
+  avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/r_oy/128.jpg',
+  stats: {
+    followers: 5603,
+    views: 4827,
+    likes: 1308,
+  },
+};
 
-// showProfileInfo(profile);
+showProfileInfo(profile);
