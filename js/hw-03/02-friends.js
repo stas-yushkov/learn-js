@@ -10,6 +10,15 @@ const friends = [
 
 console.table(friends);
 
+// for (const friend of friends) {
+//   // console.log(friend);
+//   console.log(friend.name);
+
+//   friend.newProp = 555;
+// }
+
+// console.table(friends);
+
 /*
  * Ищем друга по имени
  */
@@ -17,13 +26,11 @@ console.table(friends);
 const findFriendByName = function (allFriends, friendName) {
   for (const friend of allFriends) {
     // console.log(friend);
-    // console.log(friend.name);
-
+    console.log(friend.name);
     if (friend.name === friendName) {
       return 'НАШЛИ!!!';
     }
   }
-
   return 'НЕ НАШЛИ :(';
 };
 
@@ -36,13 +43,10 @@ const findFriendByName = function (allFriends, friendName) {
 
 const getAllNames = function (allFriends) {
   const names = [];
-
   for (const friend of allFriends) {
     console.log(friend.name);
-
     names.push(friend.name);
   }
-
   return names;
 };
 
@@ -53,16 +57,13 @@ const getAllNames = function (allFriends) {
  */
 const getOnlineFriends = function (allFriends) {
   const onlineFriends = [];
-
   for (const friend of allFriends) {
     console.log(friend);
     console.log(friend.online);
-
     if (friend.online) {
       onlineFriends.push(friend);
     }
   }
-
   return onlineFriends;
 };
 
@@ -94,15 +95,13 @@ const getFriendsByStatus = function (allFriends) {
   };
 
   for (const friend of allFriends) {
-    if (friend.online) {
-      friendsByStatus.online.push(friend);
-      continue;
-    }
-
-    friendsByStatus.offline.push(friend);
-
-    // const key = friend.online ? 'online' : 'offline';
-    // friendsByStatus[key].push(friend);
+    // if (friend.online) {
+    //   friendsByStatus.online.push(friend);
+    //   continue;
+    // }
+    // friendsByStatus.offline.push(friend);
+    const key = friend.online ? 'online' : 'offline';
+    friendsByStatus[key].push(friend);
   }
 
   return friendsByStatus;
