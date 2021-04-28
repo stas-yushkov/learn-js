@@ -53,9 +53,19 @@ const profile = {
   },
 };
 
-const { avatar, name, tag, location, stats } = profile;
+// const { avatar, name, tag, location, stats } = profile;
 
-const { followers, views, likes } = stats;
+// const { followers, views, likes } = stats;
+
+// console.log(name, tag, location, avatar, followers, views, likes);
+
+const {
+  avatar,
+  name,
+  tag,
+  location,
+  stats: { followers, views, likes },
+} = profile;
 
 console.log(name, tag, location, avatar, followers, views, likes);
 
