@@ -167,8 +167,8 @@ const entries = Object.entries(authors);
  * - rest при деструктуризации в подписи
  */
 
-const showProfileInfo = function ({ name, tag, location, ...restProps }) {
-  // const { name, tag, location, ...restProps } = userProfile;
+const showProfileInfo = function (userProfile) {
+  const { name, tag, location, ...restProps } = userProfile;
 
   // console.log(name, tag, location, avatar, followers, views, likes);
   console.log(restProps);
