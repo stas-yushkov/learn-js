@@ -107,4 +107,4 @@ const getFriendsByStatus = function (allFriends) {
   return friendsByStatus;
 };
 
-console.log(getFriendsByStatus(friends));
+// console.log(getFriendsByStatus(friends));
