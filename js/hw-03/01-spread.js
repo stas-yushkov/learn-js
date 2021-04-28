@@ -15,31 +15,32 @@ const numbers = [
   9000,
 ]; //spread
 
-console.log(numbers);
+// console.log(numbers);
 
 // /*
 //  * Поиск самой маленькой или большой температуры (числа)
 //  */
-// const temps = [18, 14, 12, 21, 17, 29, 24];
+const temps = [18, 14, 12, 21, 17, 29, 24];
 
-// // console.log(Math.max(1, 4, 17, 5, 6));
-// // console.log(Math.min(...temps));
-// // console.log(temps);
+// console.log(Math.max(1, 4, 17, 5, 6));
+// console.log(Math.min(...temps));
+// console.log(Math.max(...temps));
+// console.log(temps);
 
-// // const a = [{ x: 1 }, { y: 2 }, { z: 3 }];
+// const a = [{ x: 1 }, { y: 2 }, { z: 3 }];
 
-// // const b = [...a];
+// const b = [...a];
 
-// // console.log('a: ', a);
-// // console.log('b: ', b);
+// console.log('a: ', a);
+// console.log('b: ', b);
 
-// // console.log(a[0] === b[0]);
-// // console.log(a === b);
+// console.log(a[0] === b[0]);
+// console.log(a === b);
 
-// // a[0].x = 1000;
+// a[0].x = 1000;
 
-// // console.log('a: ', a);
-// // console.log('b: ', b);
+// console.log('a: ', a);
+// console.log('b: ', b);
 
 // /*
 //  * Сшиваем несколько массивов в один через concat() и spread
@@ -49,40 +50,44 @@ console.log(numbers);
 // const nextWeekTemps = [7, 8, 9];
 
 // const allTemps = [...lastWeekTemps, ...currentTemps, ...nextWeekTemps];
-// // console.log(allTemps);
+// console.log(allTemps);
 
 // /*
 //  * Распыление объектов
 //  * - Object.prototype.assign() и spread
 //  */
-// const a = { x: 1, y: 2 };
-// const b = { x: 0, z: 3 };
+const a = { x: 1, y: 2 };
+const b = { x: 0, z: 3 };
 
-// // const c = Object.assign({name: 'Mango' }, a, b);
+// const c = Object.assign({ name: 'Mango', x: 5 }, a, b);
 
-// const c = {
-//   ...a,
-//   x: 10,
-//   ...b,
-//   y: 20,
-// };
+// console.log(a);
+// console.log(b);
+const c = {
+  name: 'Mango',
+  ...a,
+  x: 10,
+  ...b,
+  y: 20,
+};
 
-// // console.log(c);
+// console.log(c);
 
-// const defaultSettings = {
-//   theme: 'light',
-//   showNotifications: true,
-//   hideSidebar: false,
-// };
+const defaultSettings = {
+  theme: 'light',
+  showNotifications: true,
+  hideSidebar: false,
+};
 
-// const userSettings = {
-//   showNotifications: false,
-//   hideSidebar: true,
-// };
+const userSettings = {
+  showNotifications: false,
+  hideSidebar: true,
+  textColor: 'red',
+};
 
-// const finalSettings = {
-//   ...defaultSettings,
-//   ...userSettings,
-// };
+const finalSettings = {
+  ...defaultSettings,
+  ...userSettings,
+};
 
-// console.log(finalSettings);
+console.log(finalSettings);
