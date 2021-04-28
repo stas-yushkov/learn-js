@@ -9,6 +9,7 @@ const playlist = {
   rating: 5,
   tracks: ['трек-1', 'трек-2', 'трек-3'],
   trackCount: 3,
+  author: 'me',
 };
 
 const { name, rating, tracks, trackCount, author = 555 } = playlist;
