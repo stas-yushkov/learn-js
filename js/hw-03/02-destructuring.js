@@ -67,7 +67,21 @@ const {
   stats: { followers, views, likes },
 } = profile;
 
-console.log(name, tag, location, avatar, followers, views, likes);
+console.log(
+  name,
+  '\n',
+  tag,
+  '\n',
+  location,
+  '\n',
+  avatar,
+  '\n',
+  followers,
+  '\n',
+  views,
+  '\n',
+  likes,
+);
 
 /*
  * Деструктуризация массивов
