@@ -89,9 +89,9 @@ const {
 
 const rgb = [255, 100, 80];
 
-const [red, green, blue] = rgb;
+const [red, , blue] = rgb;
 
-console.log(red, green, blue);
+console.log(red, blue);
 
 const authors = {
   kiwi: 4,
