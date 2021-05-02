@@ -154,6 +154,14 @@
 // changeObj(objData); //TODO: сделать тожесамое но без Object.entries, может через полифил
 // // // // // // ////////////////////////////////////////////////////////////////
 
+// -----------------------
+
+// 7) Напиши скрипт управления личным
+// кабинетом интернет банка.
+// Есть объект account в котором необходимо
+// реализовать методы для работы
+// с балансом и историей транзакций.
+
 /*
  * Типов транзацкий всего два.
  * Можно положить либо снять деньги со счета.
@@ -181,8 +189,9 @@ const account = {
    * Принимает сумму и тип транзакции.
    */
   createTransaction(type, amount) {
-    transactionID += 1;
     return {
+      id: (transactionID += 1),
+      // id: ++transactionID,
       type,
       amount,
     };
@@ -199,6 +208,9 @@ const account = {
     this.balance += amount;
     const transaction = this.createTransaction(Transaction.DEPOSIT, amount);
     this.transactions.push(transaction);
+    // this.balance += amount;
+    // const transaction = this.createTransaction(Transaction.DEPOSIT, amount);
+    // this.transactions.push(transaction);
   },
 
   /*
@@ -215,10 +227,11 @@ const account = {
    */
   withdraw(amount) {
     if (amount > this.balance) {
-      return 'no money';
+      return 'Cнятие такой суммы не возможно, недостаточно средств';
     } else {
       this.balance -= amount;
-      const transaction = this.createTransaction(Transaction.WITHDRAW);
+      const transaction = this.createTransaction(Transaction.WITHDRAW, amount);
+      this.transactions.push(transaction);
     }
   },
 
@@ -232,57 +245,53 @@ const account = {
   /*
    * Метод ищет и возвращает объект транзации по id
    */
-  getTransactionDetails(id) {},
+  getTransactionDetails(id) {
+    for (const transaction of this.transactions) {
+      if (transaction['id'] === id) {
+        return transaction;
+      }
+    }
+
+    // for (const transaction of this.transactions) {
+    //   if (transaction['id'] === id) {
+    //     return transaction;
+    //   }
+    // }
+  },
 
   /*
    * Метод возвращает количество средств
    * определенного типа транзакции из всей истории
    * транзакций
    */
-  getTransactionTotal(type) {},
+  getTransactionTotal(type) {
+    let sum = 0;
+
+    for (const transaction of this.transactions) {
+      if (transaction['type'] === type) {
+        sum += transaction['amount'];
+      }
+    }
+
+    return sum;
+  },
 };
 
+account.deposit(3000);
+console.log(account.getTransactionDetails(0));
+account.deposit(3000);
+account.deposit(3000);
 account.deposit(3000);
 
 account.withdraw(1000);
 
 console.log(account.getBalance());
 
-console.log();
+console.log(account.transactions);
 
-// // // // // // ////////////////////////////////////////////////////////////////
+console.log(account.getTransactionDetails(1));
 
-// // // // // // ////////////////////////////////////////////////////////////////
-
-// // // // // // ////////////////////////////////////////////////////////////////
-
-// // // // // // ////////////////////////////////////////////////////////////////
-
-// // // // // // ////////////////////////////////////////////////////////////////
-
-// // // // // // ////////////////////////////////////////////////////////////////
-
-// // // // // // ////////////////////////////////////////////////////////////////
-
-// // // // // // ////////////////////////////////////////////////////////////////
-
-// // // // // // ////////////////////////////////////////////////////////////////
-
-// // // // // // ////////////////////////////////////////////////////////////////
-
-// // // // // // ////////////////////////////////////////////////////////////////
-
-// // // // // // ////////////////////////////////////////////////////////////////
-
-// // // // // // ////////////////////////////////////////////////////////////////
-
-// // // // // // ////////////////////////////////////////////////////////////////
-
-// // // // // // ////////////////////////////////////////////////////////////////
-
-// // // // // // ////////////////////////////////////////////////////////////////
-
-// // // // // // ////////////////////////////////////////////////////////////////
+console.log(account.getTransactionTotal(Transaction.DEPOSIT));
 
 // // // // // // ////////////////////////////////////////////////////////////////
 // https://prnt.sc/129kttj Ашот фото)
