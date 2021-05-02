@@ -60,8 +60,26 @@ const cart = {
     return totalPrice;
   },
 
-  increaseQuantity(productName) {},
-  decreaseQuantity(productName) {},
+  increaseQuantity(productName) {
+    for (let item of this.items) {
+      if (item.name === productName) {
+        item.quantity += 1;
+      }
+    }
+  },
+  decreaseQuantity(productName) {
+    const { items } = this;
+
+    for (const item of items) {
+      if (item.name === productName) {
+        item.quantity -= 1;
+      }
+      if (item.quantity === 0) {
+        const indexOfItem = items.indexOf(item);
+        items.splice(indexOfItem, 1);
+      }
+    }
+  },
 };
 
 console.table(cart.getItems());
@@ -81,18 +99,25 @@ console.log('Total: ', cart.countTotalPrice());
 cart.remove('🍇');
 console.table(cart.getItems());
 
-// cart.clear();
-// console.table(cart.getItems());
+// cart.increaseQuantity('🍋');
+// cart.increaseQuantity('🍋');
+// cart.increaseQuantity('🍋');
+// cart.increaseQuantity('🍋');
+cart.increaseQuantity('🍎');
+console.table(cart.getItems());
 
-// cart.increaseQuantity('🍎');
-// console.table(cart.getItems());
-
-// cart.decreaseQuantity('🍋');
-// cart.decreaseQuantity('🍋');
-// console.table(cart.getItems());
+cart.decreaseQuantity('🍋');
+console.table(cart.getItems());
+cart.decreaseQuantity('🍋');
+console.table(cart.getItems());
+cart.decreaseQuantity('🍋');
+console.table(cart.getItems());
 
 const getProductTotalPrice = function ({ price, quantity }) {
   return price * quantity;
 };
 
 // console.log(getProductTotalPrice(cart.items[2]));
+
+cart.clear();
+console.log(cart.getItems());
