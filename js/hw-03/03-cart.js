@@ -90,3 +90,9 @@ console.table(cart.getItems());
 // cart.decreaseQuantity('🍋');
 // cart.decreaseQuantity('🍋');
 // console.table(cart.getItems());
+
+const getProductTotalPrice = function ({ price, quantity }) {
+  return price * quantity;
+};
+
+console.log(getProductTotalPrice(cart.items[2]));
