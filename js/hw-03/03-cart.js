@@ -9,7 +9,7 @@
  * - decreaseQuantity(productName)
  *
  * { name: '🍎', price: 50 }
- * { name: '🍇', price: 60 }
+ * { name: '🍇', price: 70 }
  * { name: '🍋', price: 60 }
  * { name: '🍓', price: 110 }
  */
@@ -67,7 +67,7 @@ const cart = {
 console.table(cart.getItems());
 
 cart.add({ name: '🍎', price: 50 });
-cart.add({ name: '🍇', price: 60 });
+cart.add({ name: '🍇', price: 70 });
 cart.add({ name: '🍋', price: 60 });
 cart.add({ name: '🍋', price: 60 });
 cart.add({ name: '🍓', price: 110 });
@@ -95,4 +95,4 @@ const getProductTotalPrice = function ({ price, quantity }) {
   return price * quantity;
 };
 
-console.log(getProductTotalPrice(cart.items[2]));
+// console.log(getProductTotalPrice(cart.items[2]));
