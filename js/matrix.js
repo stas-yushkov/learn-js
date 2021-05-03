@@ -15,7 +15,7 @@ const matrix = {
     }
   },
 
-  insert({ symbol, rowIndex, columnIndex }) {
+  updateSymbol({ symbol, rowIndex, columnIndex }) {
     this.matrix[rowIndex][columnIndex] = symbol;
   },
 
@@ -23,18 +23,26 @@ const matrix = {
     console.table(this.matrix);
   },
 };
-const makeProps = {
-  symbol: '💜',
+// const makeProps = {
+//   symbol: '💜',
+//   rows: 4,
+//   columns: 5,
+// };
+// const insertProps = {
+//   symbol: '😾',
+//   rowIndex: 1,
+//   columnIndex: 1,
+// };
+
+matrix.make({
+  symbol: '☑️',
   rows: 4,
   columns: 5,
-};
-const insertProps = {
-  symbol: '😾',
+});
+matrix.get();
+matrix.updateSymbol({
+  symbol: '❌',
   rowIndex: 1,
   columnIndex: 1,
-};
-
-matrix.make(makeProps);
-matrix.get();
-matrix.insert(insertProps);
+});
 matrix.get();
