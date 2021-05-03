@@ -94,6 +94,18 @@ const filter = function (array, test) {
   return filteredElements;
 };
 
+const fruits = [
+  { name: 'apples', quantity: 200, isFresh: true },
+  { name: 'grapes', quantity: 150, isFresh: false },
+  { name: 'bananas', quantity: 100, isFresh: true },
+];
+
+const freshFruits = filter(fruits, fruit => fruit.isFresh);
+console.log(freshFruits); // массив с объектами apples и bananas
+
+const fruitsWithQuantity = filter(fruits, fruit => fruit.quantity >= 120);
+console.log(fruitsWithAmount); // массив с объектами apples и grapes
+
 // // // ///////////////////////////////////////////////////////////////
 
 // // // ///////////////////////////////////////////////////////////////
