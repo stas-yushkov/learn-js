@@ -78,6 +78,21 @@
 
 // repeat(2, console.log);
 // // // ///////////////////////////////////////////////////////////////
+// Фильтрация массива
+
+const filter = function (array, test) {
+  const filteredElements = [];
+
+  for (const element of array) {
+    const passed = test(element);
+
+    if (passed) {
+      filteredElements.push(element);
+    }
+  }
+
+  return filteredElements;
+};
 
 // // // ///////////////////////////////////////////////////////////////
 
