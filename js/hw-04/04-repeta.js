@@ -28,13 +28,39 @@
 //   console.log(i);
 // }
 
-const repeatLog = function (n) {
+// const repeatLog = function (n) {
+//   for (let i = 0; i < n; i += 1) {
+//     console.log(i);
+//   }
+// };
+
+// repeatLog(5);
+
+const printValue = function (value) {
+  console.log(value);
+};
+
+const prettyPrint = function (value) {
+  console.log('Logging value: ', value);
+};
+
+const repeat = function (n, action) {
   for (let i = 0; i < n; i += 1) {
-    console.log(i);
+    action(i);
   }
 };
 
-repeatLog(5);
+// Передаем printValue как callback-функцию
+repeat(3, printValue);
+// 0
+// 1
+// 2
+
+// Передаем prettyPrint как callback-функцию
+repeat(3, prettyPrint);
+// Logging value: 0
+// Logging value: 1
+// Logging value: 2
 
 // ///////////////////////////////////////////////////////////////
 
