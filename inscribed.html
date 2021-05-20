@@ -7,24 +7,50 @@
     <title>Document</title>
   </head>
   <body>
-    <a href="./index.html">Домой</a>
     <script>
       const isRectangleInscribedInACircle = () => {
-        const radius = prompt('Цілочисельний радіус кола:');
-        const aSide = prompt(
-          'Перша цілочисельна довжина сторони прямокутника, центр якого збігається з центром кола:',
-        );
-        const bSide = prompt(
-          'Друга цілочисельна довжина сторони прямокутника, центр якого збігається з центром кола:',
-        );
-        const digitsAfterTheDot = prompt(
-          'Обчислення виконати з точністю заків після коми:',
-        );
-        const diagonal = parseFloat(
-          Math.sqrt(aSide * aSide + bSide * bSide).toFixed(digitsAfterTheDot),
+        const radius = Number.parseInt(
+          prompt('Цілочисельний радіус кола (введіть значення 65):'),
         );
 
-        if (2 * radius === diagonal) {
+        const aSide = Number.parseInt(
+          prompt(
+            'Перша цілочисельна довжина сторони прямокутника, центр якого збігається з центром кола (введіть значення 120):',
+          ),
+        );
+
+        const bSide = Number.parseInt(
+          prompt(
+            'Друга цілочисельна довжина сторони прямокутника, центр якого збігається з центром кола (введіть значення 51):',
+          ),
+        );
+
+        const digitsAfterTheDot = Number.parseInt(
+          prompt(
+            'Обчислення виконати з точністю ... знаків після коми (введіть значення 0 або 1 або більше):',
+          ),
+        );
+
+        if (
+          !Number.isInteger(radius) ||
+          !Number.isInteger(aSide) ||
+          !Number.isInteger(bSide) ||
+          !Number.isInteger(digitsAfterTheDot)
+        ) {
+          alert(
+            'Одне обо декілька введених значень не цілі числа. Введіть цілі числа',
+          );
+          window.location.reload(true);
+          return;
+        }
+
+        const diagonal = parseFloat(
+          Math.sqrt(aSide * aSide + bSide * bSide).toFixed(
+            Math.abs(digitsAfterTheDot),
+          ),
+        );
+
+        if (2 * Math.abs(radius) === diagonal) {
           alert('Прямокутник вписано');
           return;
         }
