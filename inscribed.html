@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const isRectangleInscribedInACircle = () => {
+        const radius = prompt('Цілочисельний радіус кола:');
+        const aSide = prompt(
+          'Перша цілочисельна довжина сторони прямокутника, центр якого збігається з центром кола:',
+        );
+        const bSide = prompt(
+          'Друга цілочисельна довжина сторони прямокутника, центр якого збігається з центром кола:',
+        );
+        const digitsAfterTheDot = prompt(
+          'Обчислення виконати з точністю заків після коми:',
+        );
+        const diagonal = parseFloat(
+          Math.sqrt(aSide * aSide + bSide * bSide).toFixed(digitsAfterTheDot),
+        );
+
+        if (2 * radius === diagonal) {
+          alert('Прямокутник вписано');
+          return;
+        }
+
+        alert('Прямокутник не вписано');
+      };
+
+      isRectangleInscribedInACircle();
+    </script>
+  </body>
+</html>

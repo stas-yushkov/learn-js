@@ -93,23 +93,60 @@
 // |
 // Политика конфиденциальности
 
-class User {
-  static #takenEmails = [];
+// class User {
+//   static #takenEmails = [];
 
-  static isEmailTaken(email) {
-    return User.#takenEmails.includes(email);
+//   static isEmailTaken(email) {
+//     return User.#takenEmails.includes(email);
+//   }
+
+//   #email;
+
+//   constructor({ email }) {
+//     this.#email = email;
+//     User.#takenEmails.push(email);
+//   }
+// }
+
+// const mango = new User({ email: 'mango@mail.com' });
+
+// console.log(User.isEmailTaken('poly@mail.com')); // false
+
+// console.log(User.isEmailTaken('mango@mail.com')); // true
+
+// Нехай r – цілочисельний радіус кола, a,b – цілочисельні довжини сторін
+// прямокутника, центр якого збігається з центром кола.
+// Видати повідомлення «Прямокутник вписано», якщо він розміщений в колі, і
+// «Прямокутник не вписано», якщо він не має спільних точок з колом.
+
+const radius = 65;
+const aSide = 120;
+const bSide = 51;
+const digitsAfterTheDot = 0;
+
+const isRectangleInscribedInACircle = (
+  radius,
+  aSide,
+  bSide,
+  digitsAfterTheDot,
+) => {
+  const diagonal = parseFloat(
+    Math.sqrt(aSide * aSide + bSide * bSide).toFixed(digitsAfterTheDot),
+  );
+
+  if (2 * radius === diagonal) {
+    console.log('Прямокутник вписано');
+    return;
   }
 
-  #email;
+  console.log('Прямокутник не вписано');
+};
 
-  constructor({ email }) {
-    this.#email = email;
-    User.#takenEmails.push(email);
-  }
-}
+isRectangleInscribedInACircle(radius, aSide, bSide, digitsAfterTheDot);
 
-const mango = new User({ email: 'mango@mail.com' });
+// Rounding numbers with decimal precision requires a little bit of calculation and Math.round(). Optionally we can use the toFixed() method that belongs to the Number prototype. The output type of toFixed() is a string which needs to be passed to a top-level function called parseFloat() to return a number.
+// Округлення чисел з десятковою точністю вимагає трохи обчислення та Math.round (). За бажанням ми можемо використовувати метод toFixed (), який належить прототипу Number. Тип виводу toFixed () - це рядок, який потрібно передати функції верхнього рівня, що називається parseFloat (), щоб повернути число.
 
-console.log(User.isEmailTaken('poly@mail.com')); // false
-
-console.log(User.isEmailTaken('mango@mail.com')); // true
+// https://prnt.sc/1362zqr
+// https://pawelgrzybek.com/rounding-and-truncating-numbers-in-javascript/
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
