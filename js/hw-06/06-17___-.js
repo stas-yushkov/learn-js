@@ -103,5 +103,7 @@ const MIN_RATING = 8;
 const AUTHOR = 'Бернард Корнуэлл';
 // Пиши код ниже этой строки
 
-const topRatedBooks = books;
-const booksByAuthor = books;
+const topRatedBooks = books.filter(({ rating }) => rating >= MIN_RATING);
+console.log('🚀 ~ topRatedBooks', topRatedBooks);
+const booksByAuthor = books.filter(({ author }) => author === AUTHOR);
+console.log('🚀 ~ booksByAuthor', booksByAuthor);
