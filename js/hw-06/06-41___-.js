@@ -111,3 +111,4 @@ const names = [...books]
   .sort((a, b) => a.author.localeCompare(b.author))
   .map(({ author }) => author);
 console.log('🚀 ~ names', names);
+console.log(books);
